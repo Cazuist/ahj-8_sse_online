@@ -1,11 +1,11 @@
 export default class MessageBox {
-  constructor({ content, time, type}) {
+  constructor({ content, time, type }) {
     this.content = content;
     this.time = time;
     this.type = type;
   }
 
-  createHtml(container) {
+  createHtml() {
     return `
       <div class="message-box" data-type="${this.type}">
         <div class="icon-box"></div>

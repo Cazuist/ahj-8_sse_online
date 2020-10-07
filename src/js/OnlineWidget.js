@@ -1,19 +1,19 @@
 import Listener from './Listener';
-import SSE from './SSE';
 
 export default class OnlineWidget {
   constructor(url) {
     this.url = url;
-    this.eventSource = /*new EventSource(this.url)*/null;
+    this.eventSource = /* new EventSource(this.url) */null;
     this.msgBox = null;
   }
 
   init(container) {
     this.bindToDOM(container);
     this.initElements();
-    this.registerListeners();    
+    this.registerListeners();
   }
 
+  // eslint-disable-next-line class-methods-use-this
   createHtml() {
     return `
       <div class="manager-box">
@@ -58,7 +58,7 @@ export default class OnlineWidget {
   }
 
   registerListeners() {
-    this.connBtn.addEventListener('click', (event) => Listener.onBtnClick.call(this, event));    
+    this.connBtn.addEventListener('click', (event) => Listener.onBtnClick.call(this, event));
   }
 
   addEventSourceListeners() {
