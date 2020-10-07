@@ -1,0 +1,199 @@
+h1 {
+  display: block;
+  margin: 10px auto;
+
+  text-align: center;
+}
+
+.manager-box {
+  width: 400px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  color: gray;
+
+  border: 2px solid brown;
+  border-radius: 20px;
+}
+
+/* Header -------------------------------------------------------*/
+.manager-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+  background-color: blue;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+
+  cursor: move;
+}
+
+.manager-title {
+  margin: 0;
+
+  letter-spacing: 1px;
+}
+
+.dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 50px;
+}
+
+.dot {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+
+  border: 1px solid gray;
+  border-radius: 50%;
+
+  background-image: radial-gradient(red, gray);
+}
+
+.dot-2 {
+  background-image: radial-gradient(yellow, gray);
+}
+
+.dot-3 {
+  background-image: radial-gradient(green, gray);
+}
+
+/* Controls panel ------------------------------------------------*/
+.controls-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px 10px;
+  border-bottom: 2px solid gray;
+}
+
+.controls-title {
+  margin: 0;
+
+  font-size: 16px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.control {
+  width: 20px;
+  height: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  cursor: pointer;
+}
+
+.control-goals {
+  background-image: url("../img/ball.png");
+}
+
+.control-freekick {
+  background-image: url("../img/exclam.png");
+}
+
+.control-violation {
+  background-image: url("../img/whistle.png");
+}
+
+.control:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+/* messages box ------------------------------------------------*/
+.messages-box {
+  box-sizing: border-box;
+  width: 95%;
+  min-height: 200px;
+  max-height: 400px;
+
+  margin: 10px auto;
+
+  overflow: scroll;
+}
+
+.message-box {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.icon-box {
+  width: 10%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 30px 30px;
+}
+
+[data-type="goal"] .icon-box {
+  background-image: url("../img/ball.png");
+}
+
+[data-type="freekick"] .icon-box {
+  background-image: url("../img/exclam.png");
+}
+
+.message-wrapper {
+  box-sizing: border-box;
+  width: 90%;
+  padding-left: 10px;
+}
+
+.message-time {
+  margin-bottom: 5px;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Connection control panel -------------------------------------------*/
+
+.connection-control-row {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: lightblue;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.connection-btn {
+  width: 100px;
+  height: 30px;
+
+  border-radius: 10px;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.status-box {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid gray; 
+  border-radius: 50%; 
+  background-image: radial-gradient(green, gray);
+}
+
+.status-box.disconnected {
+  background-image: radial-gradient(red, gray);
+}
